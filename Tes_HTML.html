@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Layanan Laundry</title>
+  <link rel="stylesheet" href="CSS_WAD.css">
+</head>
+<body>
+  <main class="container">
+
+    <header class="hero">
+      <h1>Daftar Layanan dan Tarif Laundry</h1>
+      <p class="subtitle">Pilih layanan yang paling sesuai dengan kebutuhan Anda</p>
+    </header>
+
+
+    <section class="Card-grid">
+      <article class="card" data-jenis="satuan">
+        <h3>Laundry Satuan</h3>
+        <p class="price">Rp7.000 <span>/ pcs</span></p>
+        <p class="time">Estimasi waktu: 1-2 hari</p>
+      </article>
+
+      <article class="card" data-jenis="kiloan">
+        <h3>Laundry Kiloan</h3>
+        <p class="price">Rp13.000 <span>/ kg</span></p>
+        <p class="time">Estimasi waktu: 2-4 hari</p>
+      </article>
+
+      <article class="card card-featured" data-jenis="express">
+        <h3>Laundry Express</h3>
+        <p class="price">Rp17.000 <span>/ kg</span></p>
+        <p class="time">Estimasi waktu: 1 hari</p>
+      </article>
+    </section>
+
+    <section class="Pesan">
+      <h3>Pesan Layanan</h3>
+      <form action="PHP_WAD.php" method="POST">
+        <input type="hidden" name="status" value="Baru">
+
+        <label for="nama">Nama</label>
+        <input type="text" id="nama" name="nama" placeholder="Nama lengkap" required>
+
+        <label for="telepon">No. HP</label>
+        <input type="tel" id="telepon" name="telepon" placeholder="08xxxxxxxxxx" required>
+
+        <label for="layanan_id">Jenis Layanan</label>
+        <select id="layanan_id" name="layanan_id" required>
+          <option value="">-- Pilih layanan --</option>
+          <option value="1">Laundry Satuan</option>
+          <option value="2">Laundry Kiloan</option>
+          <option value="3">Laundry Express</option>
+        </select>
+
+        <label for="jumlah">Jumlah (kg / pcs)</label>
+        <input type="number" id="jumlah" name="jumlah" min="0.5" step="0.5" value="1" required>
+
+        <label for="alamat">Alamat</label>
+        <textarea id="alamat" name="alamat" rows="3"></textarea>
+
+        <button type="submit" name="simpan" class="btn">Kirim Pesanan</button>
+      </form>
+    </section>
+
+  </main>
+</body>
+</html>
