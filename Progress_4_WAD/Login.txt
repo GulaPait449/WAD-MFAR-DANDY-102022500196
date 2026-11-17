@@ -1,0 +1,8 @@
+Email: admin@laundry.test
+Password: passwordbaru123
+
+Email: petugas@laundry.test
+Password: passwordbaru123
+
+Email:  pemilik@laundry.test
+Password: passwordbaru123
