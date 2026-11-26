@@ -1,0 +1,49 @@
+/* Pelengkap tampilan halaman Layanan & Pesanan.
+   Memakai kelas bawaan app.css TUBES (welcome-banner, info-panel, form-input,
+   btn-primary, table-container, popup-*). Di sini hanya kelas tambahan "lt-". */
+
+.lt-mb { margin-bottom: 20px; }
+
+.lt-flash { border-left: 5px solid var(--turquoise, #22B8A7); }
+
+.info-panel .lt-sub { margin-bottom: 20px; font-size: 13px; }
+
+.lt-panel-head { margin-bottom: 24px; }
+.lt-panel-head h2 { margin-bottom: 5px; }
+.lt-panel-head .lt-sub { margin-bottom: 0; }
+
+/* Form dua kolom */
+.lt-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 18px;
+}
+.lt-form-grid .lt-full { grid-column: 1 / -1; }
+.lt-form-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.lt-link-btn { display: inline-block; text-decoration: none; }
+
+/* Tabel: kolom ke-5 jangan dipusatkan (aturan itu khusus tabel Mesin) */
+table.lt-table th:nth-child(5),
+table.lt-table td:nth-child(5) { text-align: left !important; }
+.lt-empty { text-align: center; padding: 25px; }
+
+/* Badge tambahan di samping .status bawaan */
+.status.info     { background: #E8F1FF; color: #2865AC; }
+.status.baru     { background: #E8F1FF; color: #2865AC; }
+.status.diproses { background: #FFF1D6; color: #B7791F; }
+.status.selesai  { background: #DDF6E9; color: #218653; }
+.status.diambil  { background: #F0ECFF; color: #6B58B8; }
+
+/* Harga di kartu layanan */
+.module-card .lt-price { color: var(--navy, #263B59); font-size: 18px; font-weight: 700; margin-bottom: 6px; }
+.module-card .lt-price span { color: var(--muted, #8290A3); font-size: 12px; font-weight: 500; }
+
+/* Halaman 403 */
+.lt-error { text-align: center; padding: 48px 24px; }
+.lt-error h2 { font-size: 20px; }
+.lt-error p { margin-bottom: 22px; }
+.lt-error-btn { text-decoration: none; }
+
+@media (max-width: 700px) {
+    .lt-form-grid { grid-template-columns: 1fr; }
+}
