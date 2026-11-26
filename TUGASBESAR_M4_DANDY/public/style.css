@@ -1,0 +1,445 @@
+
+/* =========================
+   PENGATURAN UMUM
+========================= */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f2f4f7;
+    color: #333;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin: 0 0 8px;
+    font-size: 30px;
+}
+
+header p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* =========================
+   KONTEN UTAMA
+========================= */
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+/* =========================
+   CARD / KOTAK PUTIH
+========================= */
+.card {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.card p {
+    line-height: 1.5;
+}
+
+/* =========================
+   FORM TAMBAH DAN EDIT
+========================= */
+.card form {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input,
+.form-group select {
+    display: block;
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: white;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #2c3e50;
+}
+
+/* =========================
+   TOMBOL
+========================= */
+button,
+.btn {
+    display: inline-block;
+    width: auto;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+button {
+    background-color: #2c3e50;
+    color: white;
+}
+
+button:hover {
+    background-color: #1f2d3a;
+}
+
+.btn-primary {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #1f2d3a;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #565e64;
+}
+
+.btn-warning {
+    background-color: #f0ad4e;
+    color: #222;
+}
+
+.btn-warning:hover {
+    background-color: #e09b35;
+}
+
+.btn-danger {
+    background-color: #c0392b;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #962d22;
+}
+
+.btn-tambah {
+    margin-bottom: 18px;
+}
+
+.card form .btn {
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+/* =========================
+   TOMBOL EDIT DAN HAPUS
+========================= */
+.aksi {
+    white-space: nowrap;
+}
+
+.form-hapus {
+    display: inline;
+}
+
+.aksi .btn {
+    margin: 2px;
+}
+
+/* =========================
+   TABEL
+========================= */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+table th {
+    background-color: #2c3e50;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f8f8f8;
+}
+
+/* =========================
+   STATUS MESIN
+========================= */
+.status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.operasional {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.perawatan {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.rusak {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* =========================
+   PESAN SUKSES DAN ERROR
+========================= */
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 12px 15px;
+    margin-bottom: 18px;
+    border-radius: 6px;
+}
+
+.error-list {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 12px 15px;
+    margin-bottom: 18px;
+    border-radius: 6px;
+}
+
+/* =========================
+   POPUP KONFIRMASI HAPUS
+========================= */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 9999;
+}
+
+.popup-overlay.aktif {
+    display: flex;
+}
+
+.popup-box {
+    background-color: white;
+    width: 100%;
+    max-width: 400px;
+    padding: 30px 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    animation: popupMuncul 0.2s ease-out;
+}
+
+.popup-icon {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background-color: #f8d7da;
+    color: #c0392b;
+    font-size: 35px;
+    font-weight: bold;
+    line-height: 55px;
+}
+
+.popup-box h2 {
+    color: #2c3e50;
+    font-size: 22px;
+    margin: 0 0 12px;
+}
+
+.popup-box p {
+    margin: 0 0 10px;
+    line-height: 1.5;
+}
+
+.popup-note {
+    color: #777;
+    font-size: 13px;
+}
+
+.popup-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.popup-actions .btn {
+    min-width: 100px;
+}
+
+/* =========================
+   ANIMASI POPUP
+========================= */
+@keyframes popupMuncul {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+    font-size: 14px;
+}
+
+/* =========================
+   TAMPILAN HP
+========================= */
+@media (max-width: 600px) {
+    main {
+        width: 95%;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    table th,
+    table td {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    .popup-box {
+        padding: 25px 18px;
+    }
+}
+
+/* =========================
+   DROPDOWN PENGGUNA
+========================= */
+header {
+    position: relative;
+}
+
+.header-wrapper {
+    position: relative;
+}
+
+.user-dropdown {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.user-dropdown > button {
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    padding: 8px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.user-dropdown > button:hover {
+    background-color: #1f2d3a;
+}
+
+#dropdownMenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    min-width: 120px;
+    margin-top: 5px;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+#dropdownMenu.aktif {
+    display: block;
+}
+
+#dropdownMenu form {
+    margin: 0;
+}
+
+#dropdownMenu form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 0;
+    background-color: white;
+    color: #333;
+    text-align: left;
+}
+
+#dropdownMenu form button:hover {
+    background-color: #f2f4f7;
+}
